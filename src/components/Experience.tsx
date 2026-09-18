@@ -43,17 +43,17 @@ export default function Experience() {
             <Reveal
               key={v.number}
               delay={i * 0.08}
-              className={`py-10 pr-8 border-t border-navy-950/10 ${
+              className={`py-12 pr-8 border-t border-navy-950/10 ${
                 i < values.length - 1 ? "lg:border-r" : ""
               } ${i % 2 === 0 ? "sm:border-r lg:border-r" : ""}`}
             >
-              <span className="font-serif italic text-gold-500 text-4xl block mb-6">
+              <span className="font-serif italic text-gold-500 text-5xl block mb-7">
                 {v.number}
               </span>
-              <h3 className="font-serif text-navy-950 text-xl mb-3">
+              <h3 className="font-serif text-navy-950 text-2xl mb-3.5">
                 {v.title}
               </h3>
-              <p className="text-ink-soft text-sm leading-relaxed">
+              <p className="text-ink-soft text-base leading-relaxed">
                 {v.text}
               </p>
             </Reveal>

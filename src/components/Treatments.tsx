@@ -25,8 +25,8 @@ export default function Treatments() {
         </Reveal>
 
         {/* desktop: interactive list + preview panel */}
-        <div className="hidden md:grid grid-cols-12 gap-16">
-          <div className="col-span-7">
+        <div className="hidden md:grid grid-cols-12 gap-10 lg:gap-12">
+          <div className="col-span-6">
             <ul onMouseLeave={() => setActive(0)}>
               {treatments.map((t, i) => (
                 <li
@@ -72,10 +72,10 @@ export default function Treatments() {
             </ul>
           </div>
 
-          <div className="col-span-5">
-            <div className="sticky top-32 relative aspect-[4/5] rounded-sm border border-white/10 bg-gradient-to-br from-navy-900 to-navy-800 overflow-hidden flex flex-col justify-end p-8">
+          <div className="col-span-6">
+            <div className="sticky top-32 aspect-[4/5] rounded-sm border border-white/10 bg-gradient-to-br from-navy-900 to-navy-800 overflow-hidden flex flex-col justify-end p-10 lg:p-12">
               <svg
-                className="absolute inset-0 m-auto w-2/3 opacity-[0.08]"
+                className="absolute inset-0 m-auto w-[85%] opacity-[0.07]"
                 viewBox="0 0 200 200"
                 fill="none"
               >
@@ -85,15 +85,17 @@ export default function Treatments() {
                   strokeWidth="1"
                 />
               </svg>
-              <span className="font-serif italic text-gold-400 text-7xl leading-none opacity-20 mb-4">
-                {treatments[active].number}
-              </span>
-              <h3 className="font-serif text-white text-3xl mb-3">
-                {treatments[active].name}
-              </h3>
-              <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-                {treatments[active].description}
-              </p>
+              <div key={active} className="fade-swap">
+                <span className="font-serif italic text-gold-400 text-8xl leading-none opacity-20 mb-5 block">
+                  {treatments[active].number}
+                </span>
+                <h3 className="font-serif text-white text-4xl mb-4">
+                  {treatments[active].name}
+                </h3>
+                <p className="text-white/60 text-base leading-relaxed max-w-sm">
+                  {treatments[active].description}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +131,7 @@ export default function Treatments() {
                   style={{ display: "grid" }}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-white/55 text-sm leading-relaxed pr-8">
+                    <p className="text-white/55 text-base leading-relaxed pr-8">
                       {t.description}
                     </p>
                   </div>

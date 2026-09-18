@@ -25,7 +25,7 @@ export default function Manifesto() {
           </Reveal>
 
           <Reveal className="lg:col-span-4" y={40} delay={0.15}>
-            <p className="text-ink-soft text-base sm:text-lg leading-relaxed">
+            <p className="text-ink-soft text-lg leading-relaxed">
               Na Carajás Odontologia, cada atendimento começa ouvindo você.
               Combinamos cuidado humanizado, conhecimento e tecnologia para
               tornar cada etapa mais tranquila — da primeira consulta ao

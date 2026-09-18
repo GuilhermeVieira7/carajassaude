@@ -40,6 +40,25 @@ body {
   color: var(--color-navy-950);
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* near-imperceptible film grain to break up flat navy fields */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
@@ -150,6 +169,32 @@ button {
 
   .reveal-mask {
     overflow: hidden;
+  }
+
+  /* soft radial glow used behind portrait photography */
+  .portrait-glow {
+    background: radial-gradient(
+      closest-side,
+      color-mix(in srgb, var(--color-gold-500) 16%, transparent) 0%,
+      color-mix(in srgb, var(--color-navy-700) 40%, transparent) 55%,
+      transparent 80%
+    );
+    filter: blur(6px);
+  }
+
+  .fade-swap {
+    animation: fadeSwap 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes fadeSwap {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

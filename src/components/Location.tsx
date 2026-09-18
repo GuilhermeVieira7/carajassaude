@@ -17,7 +17,7 @@ export default function Location() {
               Canaã dos Carajás.
             </span>
           </h2>
-          <p className="flex items-center gap-2 text-ink-soft text-base mb-10">
+          <p className="flex items-center gap-2 text-ink-soft text-lg mb-10">
             <MapPin size={18} className="text-gold-600" />
             Canaã dos Carajás — PA
           </p>
@@ -44,6 +44,28 @@ export default function Location() {
 
         <Reveal y={30} delay={0.1} className="lg:col-span-6">
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-navy-950/10 bg-navy-900">
+            <svg
+              className="absolute inset-0 w-full h-full opacity-[0.18]"
+              viewBox="0 0 400 300"
+              fill="none"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M-10 210C40 190 70 230 120 200C170 170 190 220 240 190C290 160 310 210 360 180C390 162 400 168 410 160"
+                stroke="var(--color-gold-400)"
+                strokeWidth="1"
+              />
+              <path
+                d="M-10 250C50 230 90 260 140 235C190 210 210 250 260 225C310 200 330 245 380 215C395 206 400 210 410 205"
+                stroke="var(--color-gold-400)"
+                strokeWidth="1"
+              />
+              <path
+                d="M-10 170C30 150 80 185 130 160C180 135 200 175 250 150C300 125 320 165 370 140C390 130 400 133 410 128"
+                stroke="var(--color-gold-400)"
+                strokeWidth="1"
+              />
+            </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/40">
               <MapPin size={28} className="text-gold-400" />
               <span className="text-sm tracking-wide">

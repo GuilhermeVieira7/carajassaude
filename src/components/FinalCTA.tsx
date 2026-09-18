@@ -37,7 +37,7 @@ export default function FinalCTA() {
             href={whatsappLink(DEFAULT_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold group inline-flex items-center gap-3 rounded-sm bg-gold-500 text-navy-950 font-semibold tracking-wide text-sm px-9 py-5 mt-12 hover:bg-gold-400 transition-colors"
+            className="btn-gold group inline-flex items-center gap-3 rounded-sm bg-gold-500 text-navy-950 font-semibold tracking-wide text-sm px-9 py-5 mt-12 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-400"
           >
             AGENDAR PELO WHATSAPP
             <ArrowRight

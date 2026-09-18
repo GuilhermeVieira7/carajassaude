@@ -36,31 +36,33 @@ export default function Header() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-navy-950/85 backdrop-blur-md border-b border-white/10 py-3"
-            : "bg-transparent py-5 md:py-7 border-b border-transparent"
+            ? "bg-navy-950/90 backdrop-blur-md border-b border-white/6 py-3.5"
+            : "bg-transparent py-6 md:py-8 border-b border-transparent"
         }`}
       >
         <div className="container-edit flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 shrink-0">
-            <Image
-              src="/images/logo.jpg"
-              alt="Carajás Odontologia"
-              width={40}
-              height={40}
-              className="rounded-full object-cover"
-              priority
-            />
-            <span className="font-serif text-white text-lg tracking-wide hidden sm:block">
+          <a href="#top" className="flex items-center gap-3.5 shrink-0 group">
+            <span className="relative inline-flex rounded-full ring-1 ring-gold-400/30 group-hover:ring-gold-400/60 transition-colors">
+              <Image
+                src="/images/logo.jpg"
+                alt="Carajás Odontologia"
+                width={46}
+                height={46}
+                className="rounded-full object-cover"
+                priority
+              />
+            </span>
+            <span className="font-serif text-white text-xl tracking-wide hidden sm:block">
               Carajás <span className="text-gold-400 italic">Odontologia</span>
             </span>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-11">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="link-underline text-sm tracking-wide text-white/85 hover:text-white transition-colors"
+                className="link-underline text-sm tracking-wide text-white/80 hover:text-gold-300 transition-colors"
               >
                 {link.label}
               </a>
@@ -71,7 +73,7 @@ export default function Header() {
             href={whatsappLink(DEFAULT_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold hidden lg:inline-flex items-center gap-2 rounded-sm bg-gold-500 text-navy-950 text-sm font-semibold tracking-wide px-6 py-2.5 hover:bg-gold-400 transition-colors"
+            className="btn-gold hidden lg:inline-flex items-center gap-2 rounded-sm bg-gold-500 text-navy-950 text-sm font-semibold tracking-wide px-6 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold-400"
           >
             Agendar avaliação
           </a>
