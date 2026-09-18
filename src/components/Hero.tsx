@@ -84,7 +84,7 @@ export default function Hero() {
     <section
       id="top"
       ref={rootRef}
-      className="relative min-h-[100svh] bg-navy-950 flex flex-col"
+      className="relative min-h-[100svh] bg-navy-950 flex flex-col overflow-x-clip"
     >
       {/* faint linework echo of the logo mark */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

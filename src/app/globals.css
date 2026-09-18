@@ -26,6 +26,7 @@
 
 html {
   background: var(--color-ivory);
+  overflow-x: hidden;
 }
 
 body {
